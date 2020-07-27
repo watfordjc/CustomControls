@@ -32,5 +32,51 @@ namespace CustomControls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ColorCheckBox), new FrameworkPropertyMetadata(typeof(ColorCheckBox)));
         }
+
+
+        public Brush Glyph
+        {
+            get { return (Brush)GetValue(GlyphProperty); }
+            set { SetValue(GlyphProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Glyph.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty GlyphProperty =
+            DependencyProperty.Register("Glyph", typeof(Brush), typeof(ColorCheckBox), new PropertyMetadata(GlyphBrush));
+
+
+        public Brush MouseOverGlyph
+        {
+            get { return (Brush)GetValue(MouseOverGlyphProperty); }
+            set { SetValue(MouseOverGlyphProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MouseOverGlyph.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MouseOverGlyphProperty =
+            DependencyProperty.Register("MouseOverGlyph", typeof(Brush), typeof(ColorCheckBox), new PropertyMetadata(MouseOverGlyphBrush));
+
+
+        public Brush PressedGlyph
+        {
+            get { return (Brush)GetValue(PressedGlyphProperty); }
+            set { SetValue(PressedGlyphProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for PressedGlyph.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty PressedGlyphProperty =
+            DependencyProperty.Register("PressedGlyph", typeof(Brush), typeof(ColorCheckBox), new PropertyMetadata(PressedGlyphBrush));
+
+
+        public Brush DisabledGlyph
+        {
+            get { return (Brush)GetValue(DisabledGlyphProperty); }
+            set { SetValue(DisabledGlyphProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for DisabledGlyph.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty DisabledGlyphProperty =
+            DependencyProperty.Register("DisabledGlyph", typeof(Brush), typeof(ColorCheckBox), new PropertyMetadata(DisabledGlyphBrush));
+
+
     }
 }

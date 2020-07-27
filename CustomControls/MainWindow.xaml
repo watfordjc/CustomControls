@@ -13,6 +13,10 @@
             <local:ColorCheckBox Content="Test ColorCheckBox"  VerticalContentAlignment="Center"
                                  Foreground="DarkGreen" 
                                  FontFamily="Open Sans"
+                                 Glyph="DarkGreen"
+                                 MouseOverGlyph="Purple"
+                                 PressedGlyph="Violet"
+                                 DisabledGlyph="DarkGray"
                                  FontSize="48" />
         </StackPanel>
     </Grid>

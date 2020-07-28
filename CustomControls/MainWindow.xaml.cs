@@ -23,6 +23,20 @@ namespace CustomControls
         public MainWindow()
         {
             InitializeComponent();
+            Task.Run(DelayedBackgroundChange).ConfigureAwait(true);
+        }
+
+        private async Task DelayedBackgroundChange()
+        {
+            await Task.Delay(10000).ConfigureAwait(true);
+            stackpanel.Dispatcher.Invoke(
+               () => ChangeBackground()
+                );
+        }
+
+        private void ChangeBackground()
+        {
+            stackpanel.SetValue(CheckBoxHelper.BackgroundColorProperty, Brushes.DarkGoldenrod);
         }
     }
 }

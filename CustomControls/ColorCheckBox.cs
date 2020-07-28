@@ -79,4 +79,21 @@ namespace CustomControls
 
 
     }
+
+    public class CheckBoxHelper : DependencyObject
+    {
+        public static Brush GetBackgroundColor(DependencyObject obj)
+        {
+            return (Brush)obj.GetValue(BackgroundColorProperty);
+        }
+
+        public static void SetBackgroundColor(DependencyObject obj, Brush value)
+        {
+            obj.SetValue(BackgroundColorProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for BackgroundColor.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty BackgroundColorProperty =
+            DependencyProperty.RegisterAttached("BackgroundColor", typeof(Brush), typeof(CheckBoxHelper), new PropertyMetadata(Brushes.Blue));
+    }
 }

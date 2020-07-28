@@ -10,9 +10,10 @@
         <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center">
-            <local:ColorCheckBox Content="Test ColorCheckBox"  VerticalContentAlignment="Center"
+            <local:ColorCheckBox Content="Test ColorCheckBox" x:Name="testColourCheckBox" VerticalContentAlignment="Center"
                                  Foreground="DarkGreen" 
                                  FontFamily="Open Sans"
+                                 local:CheckBoxHelper.BackgroundColor="Gold"
                                  Glyph="DarkGreen"
                                  MouseOverGlyph="Purple"
                                  PressedGlyph="Violet"
